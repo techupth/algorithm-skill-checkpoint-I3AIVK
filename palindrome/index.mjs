@@ -8,4 +8,10 @@
 // palindrome("abba") === true
 // palindrome("abcdefg") === false
 
-export const palindrome = (str) => {};
+export const palindrome = (str) => {
+  const palindromeTest = str.replace(/[^a-zA-Z0-9]/g, "").toLowerCase();
+  return palindromeTest === palindromeTest.split("").reverse().join("");
+};
+
+console.log(palindrome("abba"));
+console.log(palindrome("abcdefg"));
